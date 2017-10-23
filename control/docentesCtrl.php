@@ -24,14 +24,14 @@ if (isset($_POST['nomTxt']) && !empty($_POST['nomTxt'])) {
         $ejecutar2 = $conexion->query($agregar);
 
         if ($ejecutar2) {
-            $bien = "El personal <b>$rfc</b>, se registró correctamente.";
+            $bien = "El dceonte <b>$rfc</b>, se registró correctamente.";
             header("Location: ../vistas/docentesFrm.php?bien=$bien");
         }else{
             $error = "No se pudo realizar la operación.";
             header("Location: ../vistas/docentesFrm.php?err=$error");
         }
     }else{
-        $error = "El personal <b>$user</b>, ya está registrado.";
+        $error = "El docente <b>$nombre</b>, ya está registrado.";
         header("Location: ../vistas/docentesFrm.php?err=$error");
     }
 }else{

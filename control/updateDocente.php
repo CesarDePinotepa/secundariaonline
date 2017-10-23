@@ -1,34 +1,34 @@
-<?php
-if (isset($_POST['idHdn']) && !empty($_POST['idHdn'])) {
-    include '../conexion.php';
+
+<?php include 'conexion.php';
+if (isset($_POST['nomTxt']) && !empty($_POST['nomTxt'])) {
+    # code...
     $id = $_POST['idHdn'];
     $nombre = $_POST['nomTxt'];
-    $user = $_POST['usrTxt'];
-    if (empty($_POST['pas2Pass']) ){
-        $pass = $_POST['pasHdn'];
+    $apaterno = $_POST['apaTxt'];
+    $amaterno = $_POST['amaTxt'];
+    $rfc = $_POST['rfcTxt'];
+    //$curp = $_POST['curpTxt'];
+    $dir = $_POST['dirTxt'];
+    $tel = $_POST['telTxt'];
+    $td = $_POST['tdTxt'];
+    $espe = $_POST['espTxt'];
+    $edo_civil = $_POST['edoSel'];
+    $email = $_POST['emaEma'];
+
+    $agregar = "UPDATE `docentes` SET `nombre`='$nombre',`apaterno`='$apaterno',`amaterno`='$amaterno',
+                `direccion`='$dir',`telefono`='$tel',`edoCivil`='$edo_civil',`tipo`='$td',`rfc`='$rfc',
+                `especialidad`='$espe',`email`='$email' WHERE `id` ='$id'";
+    $ejecutar2 = $conexion->query($agregar);
+
+    if ($ejecutar2) {
+        $bien = "Los datos del docente se actualizaron  correctamente.";
+        header("Location: ../vistas/docenteEditar.php?id=$id&bien=$bien");
     }else{
-        if ($_POST['pasPass'] == $_POST['pas2Pass']) {
-            $pass = md5($_POST['pasPass']);
-
-        }else{
-            $error = "Las contraseñas no coinciden";
-            header("Location: ../../vistas/confinicial/editar_usuario.php?id=$id&err=$error");
-        }
+        $error = "No se pudo realizar la operación.";
+        header("Location: ../vistas/docenteEditar.php?id=$ide&rr=$error");
     }
-    $editar = "UPDATE `admin` 
-			   SET `nombre`='$nombre',`user_name`='$user',`pass`='$pass' 
-			   WHERE `idadmin` = '$id'";
-    $ejecutar = $conexion->query($editar);
-
-    if ($ejecutar) {
-        $bien = "Se modificó correctamente";
-        header("Location: ../../vistas/confinicial/editar_usuario.php?id=$id&bien=$bien");
-    }else{
-        $error = "No se pudo realizar la operación";
-        header("Location: ../../vistas/confinicial/editar_usuario.php?id=$id&err=$error");
-    }
-
 }else{
-    header("Location: ../../vistas/confinicial/listar_usuarios.php");
+    header("Location: ../vistas/docenteEditar.php");
 }
+
 ?>

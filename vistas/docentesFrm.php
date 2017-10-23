@@ -62,7 +62,7 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="materias/ver-m.php">
                         <i class="pe-7s-note2"></i>
                         <p>Materias</p>
                     </a>
@@ -85,7 +85,18 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
                         <p>Horarios</p>
                     </a>
                 </li>
-
+                <li>
+                    <a href="#">
+                        <i class="pe-7s-world"></i>
+                        <p>Foro</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="usuario/ver-u.php">
+                        <i class="pe-7s-world"></i>
+                        <p>Usuario</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -201,7 +212,7 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
                                             </div>
                                         </div>
                                     </div>
-                                    <input type="hiddne" name="idHdn" value="<?php echo $id?>">
+
 
                                     <button type="submit" class="btn btn-info btn-fill pull-right">Guardar</button>
                                     <div class="clearfix"></div>

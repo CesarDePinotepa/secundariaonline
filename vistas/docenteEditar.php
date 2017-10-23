@@ -68,7 +68,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="materias/ver-m.php">
                             <i class="pe-7s-note2"></i>
                             <p>Materias</p>
                         </a>
@@ -89,6 +89,18 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         <a href="#">
                             <i class="pe-7s-file"></i>
                             <p>Horarios</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="pe-7s-world"></i>
+                            <p>Foro</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="usuario/ver-u.php">
+                            <i class="pe-7s-world"></i>
+                            <p>Usuario</p>
                         </a>
                     </li>
 
@@ -120,10 +132,10 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="header">
-                                    <h4 class="title">Alta de docentes</h4>
+                                    <h4 class="title">Ediat Docente: <b><?php echo $datos['nombre']." ". $datos['apaterno']." ". $datos['amaterno']  ?></b>   </h4>
                                 </div>
                                 <div class="content">
-                                    <form method="post" action="../control/docentesCtrl.php">
+                                    <form method="post" action="../control/updateDocente.php">
                                         <?php include '../control/mensajes.php' ?>
                                         <div class="row">
                                             <div class="col-md-5">
@@ -160,7 +172,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>CURP</label>
-                                                    <input type="text" class="form-control" name="curpTxt"
+                                                    <input type="text" class="form-control"  disabled name="curpTxt"
                                                            value="<?php echo $datos['curp'] ?>">
                                                 </div>
                                             </div>
@@ -196,7 +208,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                     <label>Estado Civil</label>
                                                     <select name="edoSel" class="form-control">
                                                         <option
-                                                            value="<?php echo $datos['nombre'] ?>"><?php echo $datos['nombre'] ?></option>
+                                                            value="<?php echo $datos['edoCivil'] ?>"><?php echo $datos['edoCivil'] ?></option>
                                                         <option value="Soltero">Soltero</option>
                                                         <option value="Casado">Casado</option>
                                                     </select>
@@ -218,9 +230,8 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                            value="<?php echo $datos['tipo'] ?>">
                                                 </div>
                                             </div>
+                                            <input type="hidden" name="idHdn" value="<?php echo $id ?>">
                                         </div>
-
-
                                         <button type="submit" class="btn btn-info btn-fill pull-right">Actualizar
                                         </button>
                                         <div class="clearfix"></div>

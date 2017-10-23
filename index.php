@@ -37,106 +37,51 @@
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="purple" >
 
-        <!--
-
-            Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
-            Tip 2: you can also add an image using data-image tag
-
-        -->
-
-        <div class="sidebar-wrapper">
-            <div class="logo">
-                <a href="#" class="simple-text">
-                    Logo
-                </a>
-            </div>
-
-            <ul class="nav">
-                <li class="active">
-                    <a href="index.php">
-                        <i class="pe-7s-door-lock"></i>
-                        <p>Inicio</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="vistas/docentesLista.php">
-                        <i class="pe-7s-user"></i>
-                        <p>Docentes</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="pe-7s-note2"></i>
-                        <p>Materias</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="pe-7s-news-paper"></i>
-                        <p>Ciclo Escolar</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="pe-7s-users"></i>
-                        <p>Estudiantes</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="pe-7s-file"></i>
-                        <p>Horarios</p>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-    </div>
 
     <div class="main-panel">
-        <nav class="navbar navbar-default navbar-fixed">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <h2>Nombre del sistema aquí</h2>
-
-                </div>
-                    <ul class="nav navbar-nav navbar-right">
-
-                        <li>
-                            <a href="#">
-                                <p>Cerrar Sesión</p>
-                            </a>
-                        </li>
-                        <li class="separator hidden-lg hidden-md"></li>
-                    </ul>
-
-            </div>
-        </nav>
-
-
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-8">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Aquí la bienvenida</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae error facere provident, quisquam ratione saepe! Aspernatur atque iste numquam sit tempore! Aspernatur culpa error id iste nam nisi, similique voluptate?</p>
+                                <h4 class="title">Inicio de Sesión</h4>
+                            </div>
+                            <div class="content">
+                                <form method="post" action="control/login.php">
+                                    <?php include 'control/mensajes.php'?>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label>Usuario</label>
+                                                <input type="text" class="form-control" name="usrTxt" autofocus >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Contraseña</label>
+                                                <input type="password" class="form-control" name="pass">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Tipo</label><br>
+                                                <input type="radio" class="form-contro" name="tipoRa" value="1">Administrador
+                                                <input type="radio" class="form-contro" name="tipoRa" value="2">Docente
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Ingresar</button>
+                                    <div class="clearfix"></div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
         </div>
-
-        <footer class="footer">
-            <div class="container-fluid">
-                <p class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="#">Nombre del sistema aquí
-                </p>
-            </div>
-        </footer>
 
     </div>
 </div>
