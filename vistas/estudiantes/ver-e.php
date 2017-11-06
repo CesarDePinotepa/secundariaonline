@@ -25,17 +25,20 @@ require_once '../plantillas/encabezado.php';
                                 <th>No. Control</th>
                                 <th>Nombre</th>
                                 <th>Grado</th>
+                                <th>Usuario</th>
                                 <th>Baja</th>
                                 </thead>
                                 <tbody>
                                 <?php $i = 0;
                                 while ($datos = $ejecutar->fetch_assoc()) {
                                     $id = $datos['id'];
+                                    $nc = $datos['no_control'];
                                     echo "<tr>";
                                     echo "<td>". $i += 1 ."</td>";
                                     echo "<td> <a href='editar-e.php?id=$id'>". $datos['no_control']."</a></td>";
                                     echo "<td>". $datos['apaterno']." ". $datos['amaterno']." ". $datos['nombre']."</td>";
                                     echo "<td>". $datos['grado'] ."</td>";
+                                    echo "<td> <a href='../../control/usuarioCtrl/guardar-u-e.php?id=$id&nc=$nc'><i class='pe-7s-user ' ></i></a></td>";
                                     echo "<td><a href='../../control/estudianteCtrl/eliminar-e.php?id=$id'  onclick='return confirm(\"¿Eliminar?\");' 
                                                    <i class='pe-7s-trash ' ></i></a></td>";
                                     echo "<tr>";

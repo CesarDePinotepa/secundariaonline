@@ -68,13 +68,13 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="ciclo_escolar/ver-v.php">
                         <i class="pe-7s-news-paper"></i>
                         <p>Ciclo Escolar</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="estudiantes/ver-e.php">
                         <i class="pe-7s-users"></i>
                         <p>Estudiantes</p>
                     </a>
@@ -93,7 +93,7 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
                 </li>
                 <li>
                     <a href="usuario/ver-u.php">
-                        <i class="pe-7s-world"></i>
+                        <i class="pe-7s-user-female"></i>
                         <p>Usuario</p>
                     </a>
                 </li>
@@ -140,7 +140,7 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Apellido paterno</label>
-                                                <input type="text" class="form-control" name="apaTxt">
+                                                <input type="text" class="form-control" name="apaTxt" required>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
@@ -155,13 +155,13 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>RFC</label>
-                                                <input type="text" class="form-control" name="rfcTxt">
+                                                <input type="text" class="form-control" name="rfcTxt" required>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>CURP</label>
-                                                <input type="text" class="form-control" name="curpTxt" >
+                                                <input type="text" class="form-control" name="curpTxt" required>
                                             </div>
                                         </div>
                                     </div>
@@ -170,7 +170,7 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Dirección</label>
-                                                <input type="text" class="form-control" name="dirTxt" >
+                                                <input type="text" class="form-control" name="dirTxt" required>
                                             </div>
                                         </div>
                                     </div>
@@ -179,21 +179,21 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Teléfono</label>
-                                                <input type="text" class="form-control" name="telTxt">
+                                                <input type="text" class="form-control" name="telTxt" required>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Email</label>
-                                                <input type="email" class="form-control" name="emaEma" >
+                                                <input type="email" class="form-control" name="emaEma" required>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Estado Civil</label>
-                                                <select name="edoSel" class="form-control">
-                                                    <option value="Soltero">Soltero</option>
-                                                    <option value="Casado">Casado</option>
+                                                <select name="edoSel" class="form-control" required>
+                                                    <option value="Soltero">Solter@</option>
+                                                    <option value="Casado">Casad@</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -202,13 +202,17 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Especialidad</label>
-                                                <input type="text" class="form-control" name="espTxt" >
+                                                <input type="text" class="form-control" name="espTxt" required>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Tipo Docente</label>
-                                                <input type="text" class="form-control" name="tdTxt" >
+                                                <select name="tdSel" class="form-control" required>
+                                                    <option value="0">Base</option>
+                                                    <option value="1">Honorarios</option>
+                                                    <option value="2">Interino</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>

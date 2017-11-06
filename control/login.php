@@ -4,9 +4,8 @@ if (isset($_POST['usrTxt']) && !empty($_POST['usrTxt'])) {
     # code...
     $user = $_POST['usrTxt'];
     $pass = md5($_POST['pass']);
-    $tipo = $_POST['tipoRa'];
 
-    $comprobar = "SELECT  *  FROM `usuario` WHERE `email` = '$user' AND `password` = '$pass' AND `tipo` ='$tipo'";
+    $comprobar = "SELECT  *  FROM `usuario` WHERE `email` = '$user' AND `password` = '$pass'";
     $ejecutar2 = $conexion->query($comprobar);
     $result = $ejecutar2->fetch_assoc();
 

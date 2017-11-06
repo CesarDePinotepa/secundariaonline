@@ -56,7 +56,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
                 <ul class="nav">
                     <li class="active">
-                        <a href="../index.php">
+                        <a href="menuAdmin.php">
                             <i class="pe-7s-door-lock"></i>
                             <p>Inicio</p>
                         </a>
@@ -74,7 +74,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="ciclo_escolar/ver-v.php">
                             <i class="pe-7s-news-paper"></i>
                             <p>Ciclo Escolar</p>
                         </a>
@@ -99,7 +99,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     </li>
                     <li>
                         <a href="usuario/ver-u.php">
-                            <i class="pe-7s-world"></i>
+                            <i class="pe-7s-user-female"></i>
                             <p>Usuario</p>
                         </a>
                     </li>
@@ -132,7 +132,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="header">
-                                    <h4 class="title">Ediat Docente: <b><?php echo $datos['nombre']." ". $datos['apaterno']." ". $datos['amaterno']  ?></b>   </h4>
+                                    <h4 class="title">Editar Docente: <b><?php echo $datos['nombre']." ". $datos['apaterno']." ". $datos['amaterno']  ?></b>   </h4>
                                 </div>
                                 <div class="content">
                                     <form method="post" action="../control/updateDocente.php">
@@ -226,8 +226,20 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>Tipo Docente</label>
-                                                    <input type="text" class="form-control" name="tdTxt"
-                                                           value="<?php echo $datos['tipo'] ?>">
+                                                    <select name="tdSel" class="form-control" required>
+                                                        <?php
+                                                          if ($datos['tipo']==0) {
+                                                              echo "<option value='".$datos['tipo']."'>Base</option>";
+                                                          }elseif ($datos['tipo']==2){
+                                                              echo "<option value='".$datos['tipo']."'>Interino</option>";
+                                                          }else{
+                                                              echo "<option value='".$datos['tipo']."'>Honorarios</option>";
+                                                          }
+                                                          ?>
+                                                    <option value="0">Base</option>
+                                                    <option value="1">Honorarios</option>
+                                                    <option value="2">Interino</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <input type="hidden" name="idHdn" value="<?php echo $id ?>">

@@ -9,7 +9,7 @@ if (isset($_POST['nomTxt']) && !empty($_POST['nomTxt'])) {
     $curp = $_POST['curpTxt'];
     $dir = $_POST['dirTxt'];
     $tel = $_POST['telTxt'];
-    $td = $_POST['tdTxt'];
+    $td = $_POST['tdSel'];
     $espe = $_POST['espTxt'];
     $edo_civil = $_POST['edoSel'];
     $email = $_POST['emaEma'];

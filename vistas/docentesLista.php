@@ -57,7 +57,7 @@ $numDatos = $ejecutar->num_rows;
 
             <ul class="nav">
                 <li class="active">
-                    <a href="../index.php">
+                    <a href="menuAdmin.php">
                         <i class="pe-7s-door-lock"></i>
                         <p>Inicio</p>
                     </a>
@@ -75,13 +75,13 @@ $numDatos = $ejecutar->num_rows;
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="ciclo_escolar/ver-v.php">
                         <i class="pe-7s-news-paper"></i>
                         <p>Ciclo Escolar</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="estudiantes/ver-e.php">
                         <i class="pe-7s-users"></i>
                         <p>Estudiantes</p>
                     </a>
@@ -100,7 +100,7 @@ $numDatos = $ejecutar->num_rows;
                 </li>
                 <li>
                     <a href="usuario/ver-u.php">
-                        <i class="pe-7s-world"></i>
+                        <i class="pe-7s-user-female"></i>
                         <p>Usuario</p>
                     </a>
                 </li>
@@ -156,8 +156,10 @@ $numDatos = $ejecutar->num_rows;
                                         echo "<td> <a href='docenteEditar.php?id=$id'>". $datos['nombre']." " .$datos['apaterno']." ".$datos['amaterno'] ."</a></td>";
                                         echo "<td>". $datos['rfc']."</td>";
                                         echo "<td>". $datos['telefono'] ."</td>";
-                                        if ($datos['tipo']==0){
+                                        if ($datos['tipo']==0) {
                                             echo "<td>Base</td>";
+                                        }elseif ($datos['tipo']==2){
+                                            echo "<td>Interino</td>";
                                         }else{
                                             echo "<td>Honorarios</td>";
                                         }

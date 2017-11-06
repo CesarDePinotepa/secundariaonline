@@ -1,6 +1,4 @@
-<?php
-
-?>
+<?php ?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -8,7 +6,7 @@
     <!--<link rel="icon" type="image/png" href="assets/img/favicon.ico">-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>Nombre del sistema</title>
+    <title>Sistema en línea para la asistencia de la esceula secundaria</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -17,7 +15,7 @@
     <!-- Bootstrap core CSS     -->
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Animation library for notifications   -->
+    <!-- Animation library for notifications-->
     <link href="../../assets/css/animate.min.css" rel="stylesheet"/>
 
     <!--  Light Bootstrap Table core CSS    -->
@@ -25,21 +23,26 @@
 
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../../assets/css/demo.css" rel="stylesheet" />
+    <!-- <link href="assets/css/demo.css" rel="stylesheet" />-->
 
 
     <!--     Fonts and icons
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>-->
-    <link href="../../assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="../../assets/css/pe-icon-7-stroke.css" rel="stylesheet" />-
+
 </head>
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="purple">
+    <div class="sidebar" data-color="purple" >
 
-        <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+        <!--
 
+            Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+            Tip 2: you can also add an image using data-image tag
+
+        -->
 
         <div class="sidebar-wrapper">
             <div class="logo">
@@ -50,51 +53,45 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="../menuAdmin.php">
+                    <a href="../../index.php">
                         <i class="pe-7s-door-lock"></i>
                         <p>Inicio</p>
                     </a>
                 </li>
                 <li>
-                    <a href="../docentesLista.php">
-                        <i class="pe-7s-user"></i>
-                        <p>Docentes</p>
+                    <a href="../principal/quienes.php">
+                        <i class="pe-7s-browser"></i>
+                        <p>¿Quiénes somos?</p>
                     </a>
                 </li>
                 <li>
-                    <a href="../materias/ver-m.php">
-                        <i class="pe-7s-note2"></i>
-                        <p>Materias</p>
+                    <a href="../principal/bienvenida.php">
+                        <i class="pe-7s-bookmarks"></i>
+                        <p>Bienvenida</p>
                     </a>
                 </li>
                 <li>
-                    <a href="../ciclo_escolar/ver-v.php">
+                    <a href="../principal/historia.php">
                         <i class="pe-7s-news-paper"></i>
-                        <p>Ciclo Escolar</p>
+                        <p>Historia</p>
                     </a>
                 </li>
                 <li>
-                    <a href="../estudiantes/ver-e.php">
-                        <i class="pe-7s-users"></i>
-                        <p>Estudiantes</p>
+                    <a href="../principal/mision.php">
+                        <i class="pe-7s-airplay"></i>
+                        <p>Misión</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="pe-7s-file"></i>
-                        <p>Horarios</p>
+                    <a href="../principal/vision.php">
+                        <i class="pe-7s-angle-left"></i>
+                        <p>Visión</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="pe-7s-world"></i>
-                        <p>Foro</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="../usuario/ver-u.php">
-                        <i class="pe-7s-user-female"></i>
-                        <p>Usuario</p>
+                    <a href="../principal/valores.php">
+                        <i class="pe-7s-angle-down-circle"></i>
+                        <p>Valores</p>
                     </a>
                 </li>
             </ul>
@@ -104,17 +101,22 @@
     <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
-                <div class="collapse navbar-collapse">
+                <div class="navbar-header">
                     <h2>Nombre del sistema aquí</h2>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#">
-                                <p> Cerrar Sesión</p>
-                            </a>
-                        </li>
-                        <li class="separator hidden-lg hidden-md"></li>
-                    </ul>
+
                 </div>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a href="#">
+                            <p>Ingresar</p>
+                        </a>
+                    </li>
+                    <li class="separator hidden-lg hidden-md"></li>
+                </ul>
+
             </div>
         </nav>
+
+
 

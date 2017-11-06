@@ -57,7 +57,7 @@ if ($obj_ses->check_sess('userid')) {
 
             <ul class="nav">
                 <li class="active">
-                    <a href="../index.php">
+                    <a href="menuAdmin.php">
                         <i class="pe-7s-door-lock"></i>
                         <p>Inicio</p>
                     </a>
@@ -75,7 +75,7 @@ if ($obj_ses->check_sess('userid')) {
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="ciclo_escolar/ver-v.php">
                         <i class="pe-7s-news-paper"></i>
                         <p>Ciclo Escolar</p>
                     </a>
@@ -100,7 +100,7 @@ if ($obj_ses->check_sess('userid')) {
                 </li>
                 <li>
                     <a href="usuario/ver-u.php">
-                        <i class="pe-7s-user"></i>
+                        <i class="pe-7s-user-female"></i>
                         <p>Usuario</p>
                     </a>
                 </li>
@@ -119,7 +119,7 @@ if ($obj_ses->check_sess('userid')) {
 
                     <li>
                         <a href="#">
-                            <p>Cerrar Sesión</p>
+                            <p> <?php echo $obj_ses->get_value('nombre') ?>Cerrar Sesión</p>
                         </a>
                     </li>
                     <li class="separator hidden-lg hidden-md"></li>

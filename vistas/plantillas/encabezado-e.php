@@ -1,5 +1,4 @@
 <?php
-
 ?>
 <!doctype html>
 <html lang="es">
@@ -50,51 +49,27 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="../menuAdmin.php">
+                    <a href="">
                         <i class="pe-7s-door-lock"></i>
                         <p>Inicio</p>
                     </a>
                 </li>
                 <li>
-                    <a href="../docentesLista.php">
+                    <a href="">
                         <i class="pe-7s-user"></i>
-                        <p>Docentes</p>
+                        <p>Mis cursos</p>
                     </a>
                 </li>
                 <li>
-                    <a href="../materias/ver-m.php">
+                    <a href="">
                         <i class="pe-7s-note2"></i>
-                        <p>Materias</p>
+                        <p>Mis tareas</p>
                     </a>
                 </li>
                 <li>
-                    <a href="../ciclo_escolar/ver-v.php">
+                    <a href="#">
                         <i class="pe-7s-news-paper"></i>
-                        <p>Ciclo Escolar</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="../estudiantes/ver-e.php">
-                        <i class="pe-7s-users"></i>
-                        <p>Estudiantes</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="pe-7s-file"></i>
-                        <p>Horarios</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="pe-7s-world"></i>
-                        <p>Foro</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="../usuario/ver-u.php">
-                        <i class="pe-7s-user-female"></i>
-                        <p>Usuario</p>
+                        <p>Mis calificaciones</p>
                     </a>
                 </li>
             </ul>
@@ -109,7 +84,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="#">
-                                <p> Cerrar Sesión</p>
+                                <p>Cerrar Sesión</p>
                             </a>
                         </li>
                         <li class="separator hidden-lg hidden-md"></li>
