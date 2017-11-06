@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-10-2017 a las 12:12:44
+-- Tiempo de generación: 06-11-2017 a las 16:09:57
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.9
 
@@ -21,6 +21,50 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `secundaria`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ciclo`
+--
+
+CREATE TABLE `ciclo` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(30) DEFAULT NULL,
+  `fecha_ini` date DEFAULT NULL,
+  `fecha_fin` date DEFAULT NULL,
+  `fechaIn_ini` date DEFAULT NULL,
+  `fechaIn_fin` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `ciclo`
+--
+
+INSERT INTO `ciclo` (`id`, `nombre`, `fecha_ini`, `fecha_fin`, `fechaIn_ini`, `fechaIn_fin`) VALUES
+(1, 'Agosto-Diciembre', '2017-11-06', '2017-12-15', '2017-11-06', '2017-11-20');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `curso_docente`
+--
+
+CREATE TABLE `curso_docente` (
+  `id` int(11) NOT NULL,
+  `curso_id` int(11) NOT NULL,
+  `docente_id` int(11) NOT NULL,
+  `grado` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `curso_docente`
+--
+
+INSERT INTO `curso_docente` (`id`, `curso_id`, `docente_id`, `grado`) VALUES
+(1, 1, 6, '1'),
+(2, 2, 7, '2'),
+(3, 3, 8, '3');
 
 -- --------------------------------------------------------
 
@@ -48,9 +92,9 @@ CREATE TABLE `docentes` (
 --
 
 INSERT INTO `docentes` (`id`, `nombre`, `apaterno`, `amaterno`, `direccion`, `telefono`, `edoCivil`, `tipo`, `rfc`, `especialidad`, `curp`, `email`) VALUES
-(3, 'Cesar', 'Bernal', 'Mendez', 'Conocida', '909090909', 'Soltero', 0, 'aaaaaa aaa aa a a a', 'Matematicas', 'BEMC890409HDFRNS02', 'cesar@contacto.com'),
 (6, 'Javier', 'Blake', 'C', 'Ciudad de MÃ©xico', '89876543456', 'Soltero', 0, 'BJBJ123456L90', 'MÃºsica', 'BBBB 444444 HDFKSO', 'javier@contacto.com'),
-(7, 'Juan', 'Roman', 'Riquelme', 'Buenos Aires, Argentina                    ', '810810810', 'Soltero', 0, 'RORJ987654HJ5', 'Medio', 'RORJ987654HJSKN09', 'roman@contacto.com');
+(7, 'Juan', 'Roman', 'Riquelme', 'Buenos Aires, Argentina                    ', '810810810', 'Soltero', 0, 'RORJ987654HJ5', 'Medio', 'RORJ987654HJSKN09', 'roman@contacto.com'),
+(8, 'Karla', 'Olivares', 'Souza', 'Col. Napoles, CDMX', '6641234789', 'Casado', 0, 'OLSK851211L78', 'Fisica', 'OLSK851211MDFSHA07', 'karla@contacto.com');
 
 -- --------------------------------------------------------
 
@@ -100,7 +144,8 @@ CREATE TABLE `materia` (
 
 INSERT INTO `materia` (`id`, `clave`, `nombre`, `grado`) VALUES
 (1, 'BAMA-I', 'Matematicas', '1'),
-(2, 'BAQU-II', 'Quimica', '2');
+(2, 'BAQU-II', 'Quimica', '2'),
+(3, 'BAFI-III', 'FÃ­sica', '3');
 
 -- --------------------------------------------------------
 
@@ -146,11 +191,27 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` (`id`, `nombre`, `password`, `email`, `tipo`, `passwordrecovery`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com', '1', NULL),
 (10, 'asdasasd as', '827ccb0eea8a706c4c34a16891f84e7b', 'asdas@asd.cd', '1', NULL),
-(11, 'Roman', '0192023a7bbd73250516f069df18b500', 'admin', '1', NULL);
+(11, 'Roman', '0192023a7bbd73250516f069df18b500', 'admin', '1', NULL),
+(12, '20177000', 'be2bfcbdb285d5c53f419b1ce300c8ae', NULL, '0', '1'),
+(14, '20177000', 'be2bfcbdb285d5c53f419b1ce300c8ae', NULL, '0', '1'),
+(15, '20177001', 'a1c202acdbaf6e9f3a0983b907e06c93', NULL, '0', '2'),
+(16, '20177000', 'be2bfcbdb285d5c53f419b1ce300c8ae', NULL, '0', '1');
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `ciclo`
+--
+ALTER TABLE `ciclo`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `curso_docente`
+--
+ALTER TABLE `curso_docente`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `docentes`
@@ -187,10 +248,22 @@ ALTER TABLE `usuario`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `ciclo`
+--
+ALTER TABLE `ciclo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `curso_docente`
+--
+ALTER TABLE `curso_docente`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT de la tabla `docentes`
 --
 ALTER TABLE `docentes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `estudiante`
@@ -202,7 +275,7 @@ ALTER TABLE `estudiante`
 -- AUTO_INCREMENT de la tabla `materia`
 --
 ALTER TABLE `materia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `salones`
@@ -214,7 +287,7 @@ ALTER TABLE `salones`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
