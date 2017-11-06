@@ -47,7 +47,7 @@
         <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    Logo
+                    <img src="../../img/logo.jpg" alt="">
                 </a>
             </div>
 
@@ -102,13 +102,13 @@
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <h2>Nombre del sistema aquí</h2>
+                    <h3>PLAZA COMUNITARIA 2024, SANTIAGO JAMILTEPEC OAXACA.</h3>
 
                 </div>
                 <ul class="nav navbar-nav navbar-right">
 
                     <li>
-                        <a href="#">
+                        <a href="../usuario/login.php">
                             <p>Ingresar</p>
                         </a>
                     </li>

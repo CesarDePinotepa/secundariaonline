@@ -8,8 +8,9 @@ if (isset($_POST['usrTxt']) && !empty($_POST['usrTxt'])) {
     $comprobar = "SELECT  *  FROM `usuario` WHERE `email` = '$user' AND `password` = '$pass'";
     $ejecutar2 = $conexion->query($comprobar);
     $result = $ejecutar2->fetch_assoc();
-
-   if (count($result) >= 0) {
+    $num = $ejecutar2->num_rows;
+    //echo count($result)
+   if ($num > 0) {
        $obj_ses = new Simple_sessions();
        $data = array('userid' => $result['id'],
            'nombre' => $result['nombre']);
@@ -27,10 +28,11 @@ if (isset($_POST['usrTxt']) && !empty($_POST['usrTxt'])) {
 
    }else {
        $error = "Los datos de ingreso son incorrectos";
-       header("Location: ../index.php?err=$error");
+       header("Location: ../vistas/usuario/login.php?err=$error");
    }
 
 }else{
-    header("Location: ../index.php");
+    header("Location: ../vistas/usuario/login.php");
 }
 ?>
+

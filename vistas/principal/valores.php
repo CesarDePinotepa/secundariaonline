@@ -8,27 +8,39 @@
                         <center><h3 class="title">Valores</h3> <br></center>
                         <ul>
                             <li class="list-group-item">
+                                <b>Equidad</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci deserunt,
+                                dolore, eum eveniet fugit illo illum incidunt minima molestiae molestias nihil officiis perferendis
+                                placeat quam quo sint tempore voluptatum.
+                            </li>
+                            <li class="list-group-item">
+                                <b>Honestidad</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci deserunt,
+                                dolore, eum eveniet fugit illo illum incidunt minima molestiae molestias nihil officiis perferendis
+                                placeat quam quo sint tempore voluptatum.
+                            </li>
+                            <li class="list-group-item">
                                 <b>Respeto</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci deserunt,
                                 dolore, eum eveniet fugit illo illum incidunt minima molestiae molestias nihil officiis perferendis
                                 placeat quam quo sint tempore voluptatum.
                             </li>
                             <li class="list-group-item">
-                                <b>Pertenecia</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci deserunt,
+                                <b>Lealtad</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci deserunt,
                                 dolore, eum eveniet fugit illo illum incidunt minima molestiae molestias nihil officiis perferendis
                                 placeat quam quo sint tempore voluptatum.
                             </li>
                             <li class="list-group-item">
-                                <b>Integridad</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci deserunt,
+                                <b>Responsabilidad</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci deserunt,
                                 dolore, eum eveniet fugit illo illum incidunt minima molestiae molestias nihil officiis perferendis
                                 placeat quam quo sint tempore voluptatum.
                             </li>
+
                             <li class="list-group-item">
-                                <b>Profesionalismo</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci deserunt,
+                                <b>Tolerancia</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci deserunt,
                                 dolore, eum eveniet fugit illo illum incidunt minima molestiae molestias nihil officiis perferendis
                                 placeat quam quo sint tempore voluptatum.
                             </li>
+
                             <li class="list-group-item">
-                                <b>Compromiso Social</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci deserunt,
+                                <b>Sodilaridad</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci deserunt,
                                 dolore, eum eveniet fugit illo illum incidunt minima molestiae molestias nihil officiis perferendis
                                 placeat quam quo sint tempore voluptatum.
                             </li>

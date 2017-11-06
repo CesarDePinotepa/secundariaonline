@@ -5,28 +5,17 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="header">
-                        <center><h3 class="title">Bienvenida por el director</h3> <br>
-                        <h4 class="title"> Profesor. José Vasconcelos</h4><br>
-                        <img src="../../img/vasconcelos.jpg" alt=""> <br><br></center>
+                        <center><h3 class="title">Bienvenida por la directora</h3> <br>
+                        <img src="../../img/directora.jpg" alt=""> <br><br></center>
 
                         <p class="text-justify">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque fuga ipsum omnis pariatur
-                            quas suscipit veniam, voluptas. Aut deleniti dicta eos, illum itaque iusto porro repellat repudiandae.
-                            Animi, porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque fuga ipsum omnis pariatur
-                            quas suscipit veniam, voluptas. Aut deleniti dicta eos, illum itaque iusto porro repellat repudiandae.
-                            Animi, porro. <br><br>
+                            “Para mí es un orgullo y un gran honor poder ser parte de esta gran familia del INEA.
+                            Encuentro un Instituto con muchas ganas de seguir trabajando, personas que han dedicado
+                            su vida a esta labor y que seguirán trabajando de mi mano”, <br><br>
 
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque fuga ipsum omnis pariatur
-                            quas suscipit veniam, voluptas. Aut deleniti dicta eos, illum itaque iusto porro repellat repudiandae.
-                            Animi, porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque fuga ipsum omnis pariatur
-                            quas suscipit veniam, voluptas. Aut deleniti dicta eos, illum itaque iusto porro repellat repudiandae.
-                            Animi, porro. <br><br>
+                            La única forma de abatir el analfabetismo y reducir las brechas en materia de educación es trabajar con los más
+                            pobres entre los pobres y entre ellos lo estratégico es trabajar con los programas sociales.
 
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque fuga ipsum omnis pariatur
-                            quas suscipit veniam, voluptas. Aut deleniti dicta eos, illum itaque iusto porro repellat repudiandae.
-                            Animi, porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque fuga ipsum omnis pariatur
-                            quas suscipit veniam, voluptas. Aut deleniti dicta eos, illum itaque iusto porro repellat repudiandae.
-                            Animi, porro. <br>
 
                         </p>
                     </div>

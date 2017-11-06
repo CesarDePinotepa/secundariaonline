@@ -3,7 +3,9 @@
 <footer class="footer">
     <div class="container-fluid">
         <p class="copyright pull-right">
-            &copy; <script>document.write(new Date().getFullYear())</script> <a href="#">Nombre del sistema
+            &copy; <script>document.write(new Date().getFullYear())</script>
+            <a href="#">CALLE HIDALGO S/N COLONIA CENTRO, SANTIAGO JAMILTEPEC OAXACA.</a> |
+            TEL:  58 2 90 92
         </p>
     </div>
 </footer>

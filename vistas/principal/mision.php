@@ -8,13 +8,11 @@
                         <center><h3 class="title">Misión</h3> <br></center>
 
                         <p class="text-justify">
-                            La escuela secundaria (nombre de la escuela) y el sistema en línea.
-                            Aspernatur atque fuga ipsum omnis pariatur
-                            quas suscipit veniam, voluptas. Aut deleniti dicta eos, illum itaque iusto porro repellat repudiandae.
-                            Animi, porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque fuga ipsum omnis pariatur
-                            quas suscipit veniam, voluptas. Aut deleniti dicta eos, illum itaque iusto porro repellat repudiandae.
-                            Animi, porro. <br><br>
-
+                            Proporcionar educación básica de calidad a personas jóvenes y adultas mayores de 15 años,
+                            con un alto sentido de responsabilidad y humanismo, a través del Modelo Educación para la
+                            Vida y el Trabajo (MEVyT), en un marco de respeto a la diversidad cultural y lingüística del estado,
+                            para disminuir el rezago educativo y contribuir a la formación de una sociedad justa y equitativa
+                            que responda al derecho de la educación.<br><br>
 
                         </p>
                     </div>

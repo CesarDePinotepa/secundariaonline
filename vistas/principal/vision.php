@@ -8,14 +8,10 @@
                         <center><h3 class="title">Visión</h3> <br></center>
 
                         <p class="text-justify">
-                            La escuela secundaria (nombre de la escuela) y el sistema en línea.
-                            Aspernatur atque fuga ipsum omnis pariatur
-                            quas suscipit veniam, voluptas. Aut deleniti dicta eos, illum itaque iusto porro repellat repudiandae.
-                            Animi, porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque fuga ipsum omnis pariatur
-                            quas suscipit veniam, voluptas. Aut deleniti dicta eos, illum itaque iusto porro repellat repudiandae.
-                            Animi, porro. <br><br>
-
-
+                            Ser un organismo con reconocimiento por su gran alcance en los procesos de calidad educativa,
+                            a través del cumplimiento de la normatividad y valores institucionales, para que la población
+                            acceda a mejores condiciones de vida y se eleve el nivel educativo que contribuya al desarrollo
+                            y justicia social de Oaxaca. <br><br>
                         </p>
                     </div>
                 </div>
