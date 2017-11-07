@@ -1,5 +1,7 @@
 <?php
 ini_set ('error_reporting', E_ALL & ~E_NOTICE);
+require_once '../librerias/Simple_sessions.php';
+$obj_ses = new Simple_sessions();
 ?>
 <!doctype html>
 <html lang="es">
@@ -41,10 +43,10 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
         <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
 
 
-        <div class="sidebar-wrapper">
+        <div class="sidebar-wrapper" style="background-color: #04B4AE">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    Logo
+                    <img src="../img/logo.jpg" alt="">
                 </a>
             </div>
 
@@ -58,7 +60,7 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
                 <li>
                     <a href="docentesLista.php">
                         <i class="pe-7s-user"></i>
-                        <p>Docentes</p>
+                        <p>Asesores</p>
                     </a>
                 </li>
                 <li>
@@ -82,7 +84,7 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
                 <li>
                     <a href="#">
                         <i class="pe-7s-file"></i>
-                        <p>Horarios</p>
+                        <p>Asignar grupos</p>
                     </a>
                 </li>
                 <li>
@@ -104,12 +106,15 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
     <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
-                <div class="collapse navbar-collapse">
-                    <h2>Nombre del sistema aquí</h2>
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <h3>PLAZA COMUNITARIA 2024, SANTIAGO JAMILTEPEC OAXACA.</h3>
+
+                    </div>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#">
-                                <p>Cerrar Sesión</p>
+                            <a href="../control/cerrarSesion.php">
+                                <p> <?php echo $obj_ses->get_value('nombre') ?> |Cerrar Sesión</p>
                             </a>
                         </li>
                         <li class="separator hidden-lg hidden-md"></li>
@@ -125,7 +130,7 @@ ini_set ('error_reporting', E_ALL & ~E_NOTICE);
                     <div class="col-md-8">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Alta de docentes</h4>
+                                <h4 class="title">Alta de asesores</h4>
                             </div>
                             <div class="content">
                                 <form method="post" action="../control/docentesCtrl.php">

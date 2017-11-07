@@ -1,4 +1,9 @@
-<?php require_once '../plantillas/encabezado.php'?>
+<?php
+
+require_once '../../librerias/Simple_sessions.php';
+$obj_ses = new Simple_sessions();
+require_once '../plantillas/encabezado.php';
+?>
 
 <div class="content">
     <div class="container-fluid">
@@ -33,7 +38,7 @@
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <label>Usuario</label>
-                                        <input type="text" class="form-control" name="usrTxt" >
+                                        <input type="email" class="form-control" name="usrTxt" >
                                     </div>
                                 </div>
                             </div>
@@ -50,11 +55,14 @@
                                         <input type="password" class="form-control" name="cpass">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
                                     <div class="form-group">
                                         <label>Tipo</label>
-                                        <input type="radio" class="form-contro" name="tiRa" value="1">Administrador
-                                        <input type="radio" class="form-contro" name="tiRa" value="2">Docente
+                                        <input type="radio" class="radio-inline" name="tiRa" value="1">Administrador
+                                        <input type="radio" class="radio-inline" name="tiRa" value="2" checked>Docente
                                     </div>
                                 </div>
                             </div>

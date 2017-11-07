@@ -35,7 +35,7 @@
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="purple" >
+    <div class="sidebar" data-color="purple">
 
         <!--
 
@@ -44,7 +44,7 @@
 
         -->
 
-        <div class="sidebar-wrapper">
+        <div class="sidebar-wrapper" style="background-color: #04B4AE" >
             <div class="logo">
                 <a href="#" class="simple-text">
                     <img src="../../img/logo.jpg" alt="">

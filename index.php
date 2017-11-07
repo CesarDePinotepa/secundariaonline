@@ -35,7 +35,7 @@
     <body>
 
     <div class="wrapper">
-        <div class="sidebar" data-color="purple" >
+        <div class="sidebar" data-color="purple">
 
             <!--
 
@@ -44,10 +44,10 @@
 
             -->
 
-            <div class="sidebar-wrapper">
+            <div class="sidebar-wrapper" style="background-color: #04B4AE">
                 <div class="logo">
                     <a href="#" class="simple-text">
-                        Logo
+                        <img src="img/logo.jpg" alt="">
                     </a>
                 </div>
 
@@ -102,7 +102,7 @@
             <nav class="navbar navbar-default navbar-fixed">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <h2>Nombre del sistema aquí</h2>
+                        <h3>PLAZA COMUNITARIA 2024, SANTIAGO JAMILTEPEC OAXACA.</h3>
 
                     </div>
                     <ul class="nav navbar-nav navbar-right">
@@ -122,11 +122,13 @@
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <div class="card">
                                 <div class="header">
                                     <h3 class="title">Lista de Cursos</h3><br>
-
+                                </div>
+                                <div class="row">
+                                <div class="col-md-4">
                                     <?php
                                     include "control/conexion.php";
                                     $consulta0 = "SELECT * FROM `curso_docente` WHERE `grado` = '1'";
@@ -149,7 +151,10 @@
                                               <br> Profesor. ".$datos02['nombre']." ".$datos02['apaterno']." ".$datos02['amaterno']."
                                               </li>";
                                     }
-                                    echo "</ul>";
+                                    echo "</ul>
+                                    </div>
+                                    <div class='col-md-4'>
+                                    ";
 
                                     $consulta1 = "SELECT * FROM `curso_docente` WHERE `grado` = '2'";
                                     $ejecutar1 = $conexion->query($consulta1);
@@ -171,7 +176,10 @@
                                               <br> Profesor. ".$datos12['nombre']." ".$datos12['apaterno']." ".$datos12['amaterno']."
                                               </li>";
                                     }
-                                    echo "</ul>";
+                                    echo "</ul>
+                                          </div>
+                                          <div class='col-sm-4'>
+                                            ";
 
                                     $consulta2 = "SELECT * FROM `curso_docente` WHERE `grado` = '3'";
                                     $ejecutar2 = $conexion->query($consulta2);
@@ -196,7 +204,7 @@
                                     echo "</ul><br>";
 
                                     ?>
-
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -205,7 +213,9 @@
                 <footer class="footer">
                     <div class="container-fluid">
                         <p class="copyright pull-right">
-                            &copy; <script>document.write(new Date().getFullYear())</script> <a href="#">Nombre del sistema aquí
+                            &copy; <script>document.write(new Date().getFullYear())</script>
+                            <a href="#">CALLE HIDALGO S/N COLONIA CENTRO, SANTIAGO JAMILTEPEC OAXACA.</a> |
+                            TEL:  58 2 90 92
                         </p>
                     </div>
                 </footer>

@@ -2,11 +2,12 @@
 ini_set ('error_reporting', E_ALL & ~E_NOTICE);
 include '../control/conexion.php';
 
+require_once '../librerias/Simple_sessions.php';
+$obj_ses = new Simple_sessions();
+
 $traer_doc = "SELECT * FROM `docentes`";
 $ejecutar = $conexion->query($traer_doc);
 $numDatos = $ejecutar->num_rows;
-
-
 ?>
 <!doctype html>
 <html lang="es">
@@ -48,10 +49,10 @@ $numDatos = $ejecutar->num_rows;
         <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
 
 
-        <div class="sidebar-wrapper">
+        <div class="sidebar-wrapper" style="background-color: #04B4AE">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    Logo
+                    <img src="../img/logo.jpg" alt="">
                 </a>
             </div>
 
@@ -65,7 +66,7 @@ $numDatos = $ejecutar->num_rows;
                 <li>
                     <a href="docentesLista.php">
                         <i class="pe-7s-user"></i>
-                        <p>Docentes</p>
+                        <p>Asesores</p>
                     </a>
                 </li>
                 <li>
@@ -89,7 +90,7 @@ $numDatos = $ejecutar->num_rows;
                 <li>
                     <a href="#">
                         <i class="pe-7s-file"></i>
-                        <p>Horarios</p>
+                        <p>Asignar grupos</p>
                     </a>
                 </li>
                 <li>
@@ -112,12 +113,15 @@ $numDatos = $ejecutar->num_rows;
     <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
-                <div class="collapse navbar-collapse">
-                    <h2>Nombre del sistema aquí</h2>
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <h3>PLAZA COMUNITARIA 2024, SANTIAGO JAMILTEPEC OAXACA.</h3>
+
+                    </div>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#">
-                                <p>Cerrar Sesión</p>
+                            <a href="../control/cerrarSesion.php">
+                                <p> <?php echo $obj_ses->get_value('nombre') ?> | Cerrar Sesión</p>
                             </a>
                         </li>
                         <li class="separator hidden-lg hidden-md"></li>
@@ -133,8 +137,8 @@ $numDatos = $ejecutar->num_rows;
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Lista de Docentes</h4>
-                                <a href="docentesFrm.php"class="btn btn-info btn-fill pull-right">Nuevo Docente</a>
+                                <h4 class="title">Lista de Asesores</h4>
+                                <a href="docentesFrm.php"class="btn btn-info btn-fill pull-right">Nuevo Asesor</a>
                                 <?php include '../control/mensajes.php'?>
                             </div>
                             <div class="content table-responsive table-full-width">

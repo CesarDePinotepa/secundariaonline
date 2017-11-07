@@ -48,10 +48,10 @@ if ($obj_ses->check_sess('userid')) {
 
         -->
 
-        <div class="sidebar-wrapper">
+        <div class="sidebar-wrapper" style="background-color: #04B4AE">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    Logo
+                    <img src="../img/logo.jpg" alt="">
                 </a>
             </div>
 
@@ -65,7 +65,7 @@ if ($obj_ses->check_sess('userid')) {
                 <li>
                     <a href="docentesLista.php">
                         <i class="pe-7s-user"></i>
-                        <p>Docentes</p>
+                        <p>Asesores</p>
                     </a>
                 </li>
                 <li>
@@ -87,9 +87,9 @@ if ($obj_ses->check_sess('userid')) {
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="horarios/ver-h.php">
                         <i class="pe-7s-file"></i>
-                        <p>Horarios</p>
+                        <p>Asingnas grupos</p>
                     </a>
                 </li>
                 <li>
@@ -111,15 +111,16 @@ if ($obj_ses->check_sess('userid')) {
     <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <h2>Nombre del sistema aquí</h2>
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <h3>PLAZA COMUNITARIA 2024, SANTIAGO JAMILTEPEC OAXACA.</h3>
 
-                </div>
+                    </div>
                 <ul class="nav navbar-nav navbar-right">
 
                     <li>
                         <a href="#">
-                            <p> <?php echo $obj_ses->get_value('nombre') ?>Cerrar Sesión</p>
+                            <p> <?php echo $obj_ses->get_value('nombre') ?> | Cerrar Sesión</p>
                         </a>
                     </li>
                     <li class="separator hidden-lg hidden-md"></li>

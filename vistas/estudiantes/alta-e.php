@@ -1,4 +1,8 @@
-<?php require_once '../plantillas/encabezado.php'?>
+<?php
+require_once '../../librerias/Simple_sessions.php';
+$obj_ses = new Simple_sessions();
+require_once '../plantillas/encabezado.php';
+?>
 
 <div class="content">
     <div class="container-fluid">

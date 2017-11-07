@@ -1,4 +1,8 @@
-<?php include "../../control/conexion.php";
+<?php
+require_once '../../librerias/Simple_sessions.php';
+$obj_ses = new Simple_sessions();
+
+include "../../control/conexion.php";
 $id = $_GET['id'];
 $consulta = "SELECT * FROM `usuario` WHERE `passwordrecovery`  ='$id' ";
 $ejecutar = $conexion->query($consulta);

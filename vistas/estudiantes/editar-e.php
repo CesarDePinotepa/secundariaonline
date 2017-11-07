@@ -1,4 +1,7 @@
-<?php require_once '../plantillas/encabezado.php';
+<?php
+require_once '../../librerias/Simple_sessions.php';
+$obj_ses = new Simple_sessions();
+require_once '../plantillas/encabezado.php';
 
 $id = $_GET['id'];
 include '../../control/conexion.php';

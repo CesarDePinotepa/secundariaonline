@@ -1,10 +1,11 @@
 <?php
 ini_set ('error_reporting', E_ALL & ~E_NOTICE);
 include '../../control/conexion.php';
-
-$traer_doc = "SELECT * FROM `usuario` WHERE `tipo` ='1'";
+$traer_doc = "SELECT * FROM `usuario` WHERE `tipo` ='1' OR `tipo` ='2' ";
 $ejecutar = $conexion->query($traer_doc);
 
+require_once '../../librerias/Simple_sessions.php';
+$obj_ses = new Simple_sessions();
 
 require_once '../plantillas/encabezado.php';
 ?>

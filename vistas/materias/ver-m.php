@@ -1,5 +1,9 @@
 <?php
 ini_set ('error_reporting', E_ALL & ~E_NOTICE);
+
+require_once '../../librerias/Simple_sessions.php';
+$obj_ses = new Simple_sessions();
+
 include '../../control/conexion.php';
 
 $traer_doc = "SELECT * FROM `materia`";

@@ -1,4 +1,7 @@
 <?php
+require_once '../../librerias/Simple_sessions.php';
+$obj_ses = new Simple_sessions();
+
 ini_set ('error_reporting', E_ALL & ~E_NOTICE);
 include '../../control/conexion.php';
 
