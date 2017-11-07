@@ -1,0 +1,11 @@
+---login admin
+user: admin@admin.com
+pass: admin
+
+----login docente---
+user: docente@contacto.com
+pass = docente123
+
+----login estudiante----
+user: numero de control
+pass: numero de control
