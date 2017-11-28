@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-11-2017 a las 16:09:57
--- Versión del servidor: 10.1.26-MariaDB
--- Versión de PHP: 7.1.9
+-- Tiempo de generación: 28-11-2017 a las 12:08:00
+-- Versión del servidor: 10.1.28-MariaDB
+-- Versión de PHP: 7.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -52,19 +52,18 @@ INSERT INTO `ciclo` (`id`, `nombre`, `fecha_ini`, `fecha_fin`, `fechaIn_ini`, `f
 
 CREATE TABLE `curso_docente` (
   `id` int(11) NOT NULL,
-  `curso_id` int(11) NOT NULL,
   `docente_id` int(11) NOT NULL,
-  `grado` char(1) DEFAULT NULL
+  `grado` char(1) DEFAULT NULL,
+  `grupo` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `curso_docente`
 --
 
-INSERT INTO `curso_docente` (`id`, `curso_id`, `docente_id`, `grado`) VALUES
-(1, 1, 6, '1'),
-(2, 2, 7, '2'),
-(3, 3, 8, '3');
+INSERT INTO `curso_docente` (`id`, `docente_id`, `grado`, `grupo`) VALUES
+(1, 6, '1', 'A'),
+(2, 8, '2', 'A');
 
 -- --------------------------------------------------------
 
@@ -150,6 +149,26 @@ INSERT INTO `materia` (`id`, `clave`, `nombre`, `grado`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `modulos_estu`
+--
+
+CREATE TABLE `modulos_estu` (
+  `id` int(11) NOT NULL,
+  `estu_id` int(11) DEFAULT NULL,
+  `mod_id` int(11) DEFAULT NULL,
+  `grupo` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `modulos_estu`
+--
+
+INSERT INTO `modulos_estu` (`id`, `estu_id`, `mod_id`, `grupo`) VALUES
+(1, 1, 1, 'A');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `salones`
 --
 
@@ -189,13 +208,11 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `nombre`, `password`, `email`, `tipo`, `passwordrecovery`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com', '1', NULL),
-(10, 'asdasasd as', '827ccb0eea8a706c4c34a16891f84e7b', 'asdas@asd.cd', '1', NULL),
-(11, 'Roman', '0192023a7bbd73250516f069df18b500', 'admin', '1', NULL),
-(12, '20177000', 'be2bfcbdb285d5c53f419b1ce300c8ae', NULL, '0', '1'),
-(14, '20177000', 'be2bfcbdb285d5c53f419b1ce300c8ae', NULL, '0', '1'),
+(1, 'admin', '0192023a7bbd73250516f069df18b500', 'admin@admin.com', '1', NULL),
+(12, '20177000', '0192023a7bbd73250516f069df18b500', '20177000', '0', '1'),
 (15, '20177001', 'a1c202acdbaf6e9f3a0983b907e06c93', NULL, '0', '2'),
-(16, '20177000', 'be2bfcbdb285d5c53f419b1ce300c8ae', NULL, '0', '1');
+(18, 'Karla Olivares Souza', '69c4a4de956d8910740f76ef33ea5d61', 'karla@contacto.com', '2', '8'),
+(19, 'Juan Roman Riquelme', '30df196559f6c591e936d7873119f5c9', 'roman@contacto.com', '2', '7');
 
 --
 -- Índices para tablas volcadas
@@ -232,6 +249,12 @@ ALTER TABLE `materia`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `modulos_estu`
+--
+ALTER TABLE `modulos_estu`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `salones`
 --
 ALTER TABLE `salones`
@@ -257,7 +280,7 @@ ALTER TABLE `ciclo`
 -- AUTO_INCREMENT de la tabla `curso_docente`
 --
 ALTER TABLE `curso_docente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `docentes`
@@ -278,6 +301,12 @@ ALTER TABLE `materia`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT de la tabla `modulos_estu`
+--
+ALTER TABLE `modulos_estu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `salones`
 --
 ALTER TABLE `salones`
@@ -287,7 +316,7 @@ ALTER TABLE `salones`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
