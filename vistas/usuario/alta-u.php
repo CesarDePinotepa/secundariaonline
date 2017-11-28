@@ -22,13 +22,14 @@ require_once '../plantillas/encabezado.php';
                                         <label>Personal</label>
 
                                         <select name="perSel" class="form-control">
+                                            <option value="-1">Seleccione</option>
                                             <?php
                                             include '../../control/conexion.php';
                                             $consulta = "SELECT `id`, `nombre`, `apaterno`, `amaterno` FROM `docentes`";
                                             $ejecutar = $conexion->query($consulta);
 
                                             while ($datos = $ejecutar->fetch_assoc()){
-                                                echo "<option value=".$datos['apaterno']." ".$datos['amaterno']." ".$datos['nombre'].">".$datos['apaterno']." ".$datos['amaterno']." ".$datos['nombre']." </option>";
+                                                echo "<option value='".$datos['id']."'>".$datos['apaterno']." ".$datos['amaterno']." ".$datos['nombre']." </option>";
                                             }
                                             $conexion->close();
                                             ?>
@@ -66,7 +67,7 @@ require_once '../plantillas/encabezado.php';
                                     </div>
                                 </div>
                             </div>
-                            <input type="hidden" name="idHdn" value="<?php $datos['id'] ?>">
+
                             <button type="submit" class="btn btn-info btn-fill pull-right">Guardar</button>
                             <div class="clearfix"></div>
                         </form>

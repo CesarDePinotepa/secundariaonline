@@ -43,7 +43,7 @@ require_once '../plantillas/encabezado.php';
                                     }
 
 
-                                    echo "<td><a href=''  onclick='return confirm(\"¿Eliminar?\");' 
+                                    echo "<td><a href='../../control/usuarioCtrl/eliminar.php?id=$id'  onclick='return confirm(\"¿Eliminar?\");' 
                                                    <i class='pe-7s-trash ' ></i></a></td>";
                                     echo "<tr>";
                                 }

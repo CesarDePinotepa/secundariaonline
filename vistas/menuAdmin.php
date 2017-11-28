@@ -119,7 +119,7 @@ if ($obj_ses->check_sess('userid')) {
                 <ul class="nav navbar-nav navbar-right">
 
                     <li>
-                        <a href="#">
+                        <a href="../control/cerrarSesion.php">
                             <p> <?php echo $obj_ses->get_value('nombre') ?> | Cerrar Sesión</p>
                         </a>
                     </li>

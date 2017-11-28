@@ -10,8 +10,7 @@ if (isset($_POST['usrTxt']) && !empty($_POST['usrTxt'])) {
     $result = $ejecutar2->fetch_assoc();
     $num = $ejecutar2->num_rows;
     //echo count($result)
-   if ($num >
-       0) {
+   if ($num > 0) {
        $obj_ses = new Simple_sessions();
        $data = array('userid' => $result['id'],
            'nombre' => $result['nombre']);
@@ -27,7 +26,7 @@ if (isset($_POST['usrTxt']) && !empty($_POST['usrTxt'])) {
             header('Location: ../vistas/menuEstu.php');
         }
 
-   }else {
+   } else {
        $error = "Los datos de ingreso son incorrectos";
        header("Location: ../vistas/usuario/login.php?err=$error");
    }

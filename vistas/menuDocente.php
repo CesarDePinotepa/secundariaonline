@@ -63,7 +63,7 @@ if ($obj_ses->check_sess('userid')) {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="asesor/listar-grupos.php">
                             <i class="pe-7s-user"></i>
                             <p>Grupos</p>
                         </a>

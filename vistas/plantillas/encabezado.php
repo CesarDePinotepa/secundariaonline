@@ -79,7 +79,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../horarios/ver-h.php">
                         <i class="pe-7s-file"></i>
                         <p>Asignar Grupos</p>
                     </a>

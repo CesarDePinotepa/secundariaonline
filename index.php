@@ -136,12 +136,12 @@
 
                                     echo "<ul> Primer Grado";
                                     while ($datos = $ejecutar0->fetch_assoc()){
-                                        $idm = $datos['curso_id'];
                                         $idd = $datos['docente_id'];
 
-                                        $consulta01 = "SELECT * FROM `materia` WHERE `id` = '$idm'";
+                                        $consulta01 = "SELECT * FROM `materia` WHERE `grado` = '1'";
                                         $ejecutar01 = $conexion->query($consulta01);
                                         $datos01 = $ejecutar01->fetch_assoc();
+                                        $idm = $datos01['id'];
 
                                         $consulta02 = "SELECT `nombre`, `apaterno`, `amaterno` FROM `docentes` WHERE `id` = '$idd'";
                                         $ejecutar02 = $conexion->query($consulta02);
@@ -161,18 +161,19 @@
 
                                     echo "<ul> Segundo Grado";
                                     while ($datos = $ejecutar1->fetch_assoc()){
-                                        $idm = $datos['curso_id'];
+
                                         $idd = $datos['docente_id'];
 
-                                        $consulta11 = "SELECT * FROM `materia` WHERE `id` = '$idm'";
+                                        $consulta11 = "SELECT * FROM `materia` WHERE `grado` = '2'";
                                         $ejecutar11 = $conexion->query($consulta11);
                                         $datos11 = $ejecutar11->fetch_assoc();
+                                        $idm2 = $datos11['id'];
 
                                         $consulta12 = "SELECT `nombre`, `apaterno`, `amaterno` FROM `docentes` WHERE `id` = '$idd'";
                                         $ejecutar12 = $conexion->query($consulta12);
                                         $datos12 = $ejecutar12->fetch_assoc();
 
-                                        echo "<li class='list-group-item'><a href='vistas/materias/misCursos.php?id=$idm'>".$datos11['nombre']."</a>
+                                        echo "<li class='list-group-item'><a href='vistas/materias/misCursos.php?id=$idm2'>".$datos11['nombre']."</a>
                                               <br> Profesor. ".$datos12['nombre']." ".$datos12['apaterno']." ".$datos12['amaterno']."
                                               </li>";
                                     }
@@ -186,18 +187,19 @@
 
                                     echo "<ul> Tercer Grado";
                                     while ($datos = $ejecutar2->fetch_assoc()){
-                                        $idm = $datos['curso_id'];
+
                                         $idd = $datos['docente_id'];
 
-                                        $consulta21 = "SELECT * FROM `materia` WHERE `id` = '$idm'";
+                                        $consulta21 = "SELECT * FROM `materia` WHERE `grado` = '3'";
                                         $ejecutar21 = $conexion->query($consulta21);
                                         $datos21 = $ejecutar21->fetch_assoc();
+                                        $idm3 = $datos21['id'];
 
                                         $consulta22 = "SELECT `nombre`, `apaterno`, `amaterno` FROM `docentes` WHERE `id` = '$idd'";
                                         $ejecutar22 = $conexion->query($consulta22);
                                         $datos22 = $ejecutar22->fetch_assoc();
 
-                                        echo "<li class='list-group-item'><a href='vistas/materias/misCursos.php?id=$idm'>".$datos21['nombre']."</a>
+                                        echo "<li class='list-group-item'><a href='vistas/materias/misCursos.php?id=$id3'>".$datos21['nombre']."</a>
                                               <br> Profesor. ".$datos22['nombre']." ".$datos22['apaterno']." ".$datos22['amaterno']."
                                               </li>";
                                     }

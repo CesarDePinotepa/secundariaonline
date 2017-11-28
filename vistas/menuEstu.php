@@ -57,13 +57,13 @@ if ($obj_ses->check_sess('userid')) {
 
                 <ul class="nav">
                     <li class="active">
-                        <a href="menuDocente.php">
+                        <a href="menuEstu.php">
                             <i class="pe-7s-door-lock"></i>
                             <p>Inicio</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="mismod/listar.php">
                             <i class="pe-7s-menu"></i>
                             <p>Mis módulos</p>
                         </a>
