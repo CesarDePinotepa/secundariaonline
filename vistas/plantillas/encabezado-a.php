@@ -61,7 +61,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../asesor/listar-act.php">
                         <i class="pe-7s-note2"></i>
                         <p>Actividades</p>
                     </a>
@@ -73,7 +73,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../usuario/cambiarPass.php">
                         <i class="pe-7s-user-female"></i>
                         <p>Cambiar contraseña</p>
                     </a>

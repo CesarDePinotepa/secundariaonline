@@ -9,10 +9,10 @@ if ($obj_ses->check_sess('userid')){
     <div class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Mis grupos </h4>
+                            <h4 class="title">Actividades </h4>
 
                             <?php include '../../control/mensajes.php'?>
                         </div>
@@ -20,30 +20,30 @@ if ($obj_ses->check_sess('userid')){
                             <table class="table table-hover table-striped">
                                 <thead>
                                 <th>Num.</th>
-                                <th>Grado</th>
+                                <th>Nombre</th>
+                                <th>Fecha de entrega</th>
                                 <th>Grupo</th>
-                                <th>Actividades</th>
+                                <th>Grado</th>
+                                <th>Calificar</th>
                                 </thead>
                                 <tbody>
                                 <?php $i = 0;
-                                $consulta = "SELECT  `passwordrecovery` FROM `usuario` WHERE `id` = '$idu'";
+                                $consulta = "SELECT * FROM `actividades` WHERE `docente_id` = '$idu' " ;
                                 $ejecutar = $conexion->query($consulta);
-                                $datos = $ejecutar->fetch_assoc();
-                                $idp = $datos['passwordrecovery'];
 
-                                $consulta2 = "SELECT * FROM `curso_docente` WHERE `docente_id` = '$idp'";
-                                $ejecutar2 = $conexion->query($consulta2);
+                                while ($datos = $ejecutar->fetch_assoc()) {
+                                    $grupo = $datos['grupo'];
+                                    $grado = $datos['grado'];
 
-
-                                while ($datos2 = $ejecutar2->fetch_assoc()) {
-                                    $grado = $datos2['grado'];
-                                    $grupo = $datos2['grupo'];
-                                    $id = $datos2['id'];
+                                    $id = $datos['id'];
                                     echo "<tr>";
                                     echo "<td>". $i += 1 ."</td>";
-                                    echo "<td> <a href=''>". $datos2['grado']."</a></td>";
-                                    echo "<td>". $datos2['grupo']."</td>";
-                                    echo "<td><a href='actividades.php?gra=$grado&gru=$grupo'> <i class='pe-7s-edit ' ></i></a></td>";
+                                    echo "<td> <a href='../../archivos". $datos['ruta'] ."' target='_blank'>". $datos['nombre']."</a></td>";
+                                    echo "<td>". $datos['fechaFin']."</td>";
+
+                                    echo "<td>". $datos['grupo']."</td>";
+                                    echo "<td>". $datos['grado']."</td>";
+                                    echo "<td><a href='listar-es.php?gra=$grado&gru=$grupo' <i class='pe-7s-pen ' ></i></a></td>";
                                     echo "<tr>";
                                 }
 
@@ -61,7 +61,7 @@ if ($obj_ses->check_sess('userid')){
         </div>
     </div>
 
-<?php
+    <?php
     require_once '../plantillas/footer.php';
 }else{
     header("Locarion: ../../index.php");

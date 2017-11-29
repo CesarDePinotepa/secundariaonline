@@ -66,13 +66,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../mismod/listar-acti.php">
                         <i class="pe-7s-note2"></i>
                         <p>Mis actividades</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../mismod/miscalificaciones.php">
                         <i class="pe-7s-note"></i>
                         <p>Mis calificaciones</p>
                     </a>

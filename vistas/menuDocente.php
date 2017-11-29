@@ -69,7 +69,7 @@ if ($obj_ses->check_sess('userid')) {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="asesor/listar-act.php">
                             <i class="pe-7s-note2"></i>
                             <p>Actividades</p>
                         </a>
@@ -81,7 +81,7 @@ if ($obj_ses->check_sess('userid')) {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="usuario/cambiarPass.php">
                             <i class="pe-7s-user-female"></i>
                             <p>Cambiar contraseña</p>
                         </a>
