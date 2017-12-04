@@ -88,13 +88,13 @@ $numDatos = $ejecutar->num_rows;
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="">
                         <i class="pe-7s-file"></i>
                         <p>Asignar grupos</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="foro/listar.php">
                         <i class="pe-7s-world"></i>
                         <p>Foro</p>
                     </a>

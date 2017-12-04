@@ -78,7 +78,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../miforo/listar-e.php">
                         <i class="pe-7s-keypad"></i>
                         <p>Foro</p>
                     </a>

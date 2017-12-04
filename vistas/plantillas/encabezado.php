@@ -85,7 +85,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../foro/listar.php">
                         <i class="pe-7s-world"></i>
                         <p>Foro</p>
                     </a>
