@@ -45,7 +45,7 @@ require_once '../plantillas/encabezado.php'
                             </div>
                             <input type="hidden" name="idHdn" value="<?php $datos['id'] ?>">
                             <input type="hidden" name="tipoHdn" value="0">
-                            <button type="submit" class="btn btn-info btn-fill pull-right">Actualizar</button>
+
                             <div class="clearfix"></div>
                         </form>
                     </div>
